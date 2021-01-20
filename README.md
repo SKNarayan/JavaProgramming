@@ -1,2 +1,2 @@
-# JavaProgramming-
+# JavaProgramming
 Java programming for practice 
