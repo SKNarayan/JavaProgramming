@@ -1,0 +1,49 @@
+package map;
+
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+
+public class MapIteration {
+
+    public static void main(String[] args){
+        Map<Integer, String> studentDetails = new HashMap<>();
+        studentDetails.put(101, "Divit");
+        studentDetails.put(108, "Lokesh");
+        studentDetails.put(112, "Praveen");
+        studentDetails.put(129, "Pankaj");
+        studentDetails.put(137, "Raghav");
+        studentDetails.put(140, "Dinesh");
+        studentDetails.put(144, "Amish");
+
+        keySetIteration(studentDetails);
+        System.out.println("----------------------------------");
+        iteratorInMap(studentDetails);
+        System.out.println("-----------------------------------");
+        
+
+
+    }
+
+    private static void keySetIteration(Map<Integer, String> studentDetails) {
+
+        for(Integer rollNumber : studentDetails.keySet()){
+            System.out.println("RollNumber = " + rollNumber + " " + "StudentName = " + studentDetails.get(rollNumber));
+        }
+
+    }
+
+    private static void iteratorInMap(Map<Integer, String> studentDetails) {
+
+        Iterator<Map.Entry<Integer, String>> iterator = studentDetails.entrySet().iterator();
+        while (iterator.hasNext()){
+            Map.Entry<Integer, String> entry = iterator.next();
+            System.out.println("RollNumber = " + entry.getKey() + " " + "StudentName = " + entry.getValue());
+        }
+
+    }
+
+
+
+
+}
