@@ -1,0 +1,12 @@
+package patternPractice;
+
+public class Pattern23 {
+    public static void main(String args[]){
+        for(char c = 'A'; c <= 'E'; c++){
+            for(char ch = 'E'; ch >= c; ch--){
+                System.out.print(ch+" ");
+            }
+            System.out.println();
+        }
+    }
+}
